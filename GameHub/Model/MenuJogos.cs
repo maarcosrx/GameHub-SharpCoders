@@ -9,10 +9,10 @@ namespace GameHub.Model
 {
     public class MenuJogos
     {
-        
+
         public void HubMenuJogos()
-        {                    
-        int opcaoJogos;
+        {
+            int opcaoJogos;
             do
             {
                 Console.Clear();
@@ -25,14 +25,16 @@ namespace GameHub.Model
                 {
                     case 1:
                         JogoDaVelha jogoDaVelha = new JogoDaVelha();
-                        jogoDaVelha.AJogoDaVelha();                        
+                        jogoDaVelha.AJogoDaVelha();
                         break;
                     case 2:
                         BatalhaNaval batalhaNaval = new BatalhaNaval();
                         batalhaNaval.JogoBatalhaNaval();
                         break;
                     case 3:
-                                              
+                        GameHubMenu menuPrincipal = new GameHubMenu();
+                        menuPrincipal.Menu();
+                        
                         break;
                 }
             } while (opcaoJogos != 3);

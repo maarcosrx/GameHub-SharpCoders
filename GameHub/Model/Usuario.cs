@@ -23,17 +23,17 @@ namespace GameHub.Model
             get { return nome; }
         }
 
-        public bool Autenticar()
-        {
-            foreach(Usuario usuario in usuariosCadastrados)
-            {
-                if (usuario.nome == this.nome && usuario.senha == this.senha)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+        //public bool Autenticar()
+        //{
+        //    foreach(Usuario usuario in usuariosCadastrados)
+        //    {
+        //        if (usuario.nome == this.nome && usuario.senha == this.senha)
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    return false;
+        //}
 
         //TODAS AS TENTATIVAS QUE FIZ DE TENTAR CADASTRAR UM USUARIO:
 

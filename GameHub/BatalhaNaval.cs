@@ -52,33 +52,38 @@ namespace GameHub
                 Console.WriteLine("Escolha uma das linhas 0, 1, 2, 3, 4 para atacar!");
                 linha = int.Parse(Console.ReadLine());
 
-                if (posicoesJogadas.Contains(coluna.ToString() + linha.ToString()))
-                {
-                    try
-                    {
-                        throw new Exception("Esta posição já foi jogada anteriormente. Escolha outra posição.");
 
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine($"Erro: {e.Message}");
-                    }
-                }
-                else
-                {
-                    posicoesJogadas.Add(coluna.ToString() + linha.ToString());
-                    // Continuar verificando se a posição escolhida contém um navio
-                }
+                //Tentei fazer uma validação de posição já jogada, mas não consegui. Acredito que por eu ter colocado que o tabuleiro[posicao1, posicao2] é igual a "Acertou"
+
+                //if (posicoesJogadas.Contains(coluna.ToString() + linha.ToString()))
+                //{
+                //    try
+                //    {
+                //        throw new Exception("Esta posição já foi jogada anteriormente. Escolha outra posição.");
+
+                //    }
+                //    catch (Exception e)
+                //    {
+                //        Console.WriteLine($"Erro: {e.Message}");
+                //    }
+                //}
+                //else
+                //{
+                //    posicoesJogadas.Add(coluna.ToString() + linha.ToString());
+                //    // Continuar verificando se a posição escolhida contém um navio
+                //}
+
 
                 if (tabuleiro[coluna, linha] == "Acertou")
                 {
                     navios--;
                     tentativa++;
                     Console.WriteLine($"Você acertou um navio!! Restam {navios} navios.");
-
                     Console.WriteLine("Pressione qualquer tecla para continuar");
                     Console.ReadKey();
-                    //tabuleiro[coluna, linha] = "u";
+
+                    //Fiz uma gambiarra aqui para conseguir impedir que jogue na mesma posição e ganhe acertando o mesmo navio duas vezes.
+                    tabuleiro[coluna, linha] = "u";
                 }
                 else
                 {

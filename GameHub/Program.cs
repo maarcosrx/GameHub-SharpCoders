@@ -14,10 +14,10 @@ namespace GameHub
 
             GameHubMenu menu = new GameHubMenu();
             menu.Menu();
-            opcao = int.Parse(Console.ReadLine());
-            Console.Clear();
             do
             {
+                opcao = int.Parse(Console.ReadLine());
+                Console.Clear();
                 switch (opcao)
                 {
                     case 0:
@@ -27,22 +27,24 @@ namespace GameHub
                     case 1:
                         //Aqui vai o cadastro de usuário                    
                         PessoaView.MenuNovoCadastro();
+                        GameHubMenu menuPrincipal = new GameHubMenu();
+                        menuPrincipal.Menu();
                         break;
 
                     case 2:
-                        if (PessoaView.MenuLogin())
-                        {
-                            MenuJogos menuDosJogos = new MenuJogos();
-                            menuDosJogos.HubMenuJogos();
-                        }
-                        else
-                        {
-                            Console.Clear();
-                            MenuJogos retornaMenu = new MenuJogos();
-                            retornaMenu.HubMenuJogos();
-                            opcao = int.Parse(Console.ReadLine());
-                        }
-                            break;
+                        //if (PessoaView.MenuLogin())
+                        //{
+                        MenuJogos menuDosJogos = new MenuJogos();
+                        menuDosJogos.HubMenuJogos();
+                        //}
+                        //else
+                        //{
+                        //Console.Clear();
+                        //    MenuJogos retornaMenu = new MenuJogos();
+                        //    retornaMenu.HubMenuJogos();
+                        //    opcao = int.Parse(Console.ReadLine());
+                        //}
+                        break;
 
                     case 3:
                         //Aqui vai o ranking

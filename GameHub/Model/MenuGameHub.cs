@@ -18,7 +18,7 @@ namespace GameHub.Model
             Console.WriteLine();
             Console.WriteLine("Selecione uma opção: ");
             Console.WriteLine("Cadastrar usuário ----------- (1)");
-            Console.WriteLine("Fazer Login ----------------- (2)");
+            Console.WriteLine("Selecionar jogos ------------ (2)");
             Console.WriteLine("Ranking --------------------- (3)");
             Console.WriteLine("Sair ------------------------ (0)");
         }

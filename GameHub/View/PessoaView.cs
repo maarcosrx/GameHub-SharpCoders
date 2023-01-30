@@ -22,30 +22,30 @@ namespace GameHub.View {
             return new Usuario(nome, senha);
         }
 
-        public static bool MenuLogin()
-        {
-            Console.WriteLine("Digite o seu usuário: ");
-            string nome = Console.ReadLine();
-            Console.Write("Digite sua senha: ");
-            string senha = Console.ReadLine();
-            Usuario usuario = new Usuario(nome, senha);
-            if (usuario.Autenticar())
-            {
-                Console.WriteLine("Login realizado com sucesso");
-                Console.WriteLine("Pressione qualquer tecla...");
-                Console.ReadKey();
-                Console.Clear();
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("Usuário ou senha inválidos");
-                Console.WriteLine("Pressione qualquer tecla...");
-                Console.ReadKey();
-                Console.Clear();
-                return false;
-            }
-        }
+        //public static bool MenuLogin()
+        //{
+        //    Console.Write("Digite o seu usuário: ");
+        //    string nome = Console.ReadLine();
+        //    Console.Write("Digite sua senha: ");
+        //    string senha = Console.ReadLine();
+        //    Usuario usuario = new Usuario(nome, senha);
+        //    if (usuario.Autenticar())
+        //    {
+        //        Console.WriteLine("Login realizado com sucesso");
+        //        Console.WriteLine("Pressione qualquer tecla...");
+        //        Console.ReadKey();
+        //        Console.Clear();
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Usuário ou senha inválidos");
+        //        Console.WriteLine("Pressione qualquer tecla...");
+        //        Console.ReadKey();
+        //        Console.Clear();
+        //        return false;
+        //    }
+        //}
 
     }
 }
